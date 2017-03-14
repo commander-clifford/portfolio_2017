@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<h2>Experience</h2>
+<div *ngFor="let position of positions; let i = index; trackBy: trackByFn">
+	<h3>{{position.title}}</h3>
+	<p>Employer: {{ position.employer }}<span *ngIf="position.contractor"> - {{ position.contractor }}</span></p>
+	<p>Date range: {{ position.dateStart | date:'y' }} – {{ position.dateEnd | date:'y' }}</p>
+	<p>{{position.briefDescription}}</p>
+</div>
